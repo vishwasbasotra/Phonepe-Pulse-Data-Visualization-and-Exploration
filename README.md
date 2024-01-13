@@ -72,28 +72,3 @@
 #### c) Visualization 
 
 * Finally, create a Dashboard by using Streamlit and applying selection and dropdown options on the Dashboard and show the output are Geo visualization, bar chart, and Dataframe Table
-
-
-## User Guide
-
-#### Step 1.
-
-* Select any one option fron **All India** or **State wise** or **Top Ten categories**.
-
-#### Step 2.
-
-* Select any one option fron **Transaction** or **User**.
-
-#### Step 3.
-* Select any **Year**, **Quarter** and additional required option.
-
-#### Step 4.
-
-* Finally, You get the **Geo Visualization Analysis** or **Bar chart Analysis** and **Table format Analysis**
-
-
-## Video link
-
-* Click the below Image
-
-[![Intro GUI](https://github.com/Gopinathalpha7/Phonepe_Pulse_Data_Visualization/blob/b3da3d474f9146ce257be358ae225bafe0f296ac/Intro%20GUI.png)](https://www.linkedin.com/posts/gopinath-56a02b169_guvi-iitm-zenclass-activity-7061077773880086528-U2-M?utm_source=share&utm_medium=member_desktop)
