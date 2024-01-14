@@ -1,14 +1,9 @@
 import pandas as pd
 import json
-import os
 import streamlit as st
-import sqlalchemy as sa
 import mysql.connector
-from mysql.connector import Error
-from streamlit_option_menu import option_menu
 from PIL import Image
 import plotly.express as px
-import plotly.graph_objects as go
 
 #Configuring streamlit header
 im = Image.open("phonepe-logo.png")
