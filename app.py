@@ -377,27 +377,27 @@ if selected_option == 'Transactional':
         with col1:
             st.markdown('<p class="small-font">Merchant payments:</p>', unsafe_allow_html=True)
         with col2:
-            st.markdown(f'<p class="big-font">{total_trans_category('Merchant payments')}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="big-font">{total_trans_category("Merchant payments")}</p>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
             st.markdown('<p class="small-font">Peer-to-peer payments</p>', unsafe_allow_html=True)
         with col2:
-            st.markdown(f'<p class="big-font">{total_trans_category('Peer-to-peer payments')}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="big-font">{total_trans_category("Peer-to-peer payments")}</p>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
             st.markdown('<p class="small-font">Recharge & bill payments</p>', unsafe_allow_html=True)
         with col2:
-            st.markdown(f'<p class="big-font">{total_trans_category('Recharge & bill payments')}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="big-font">{total_trans_category("Recharge & bill payments")}</p>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
             st.markdown('<p class="small-font">Financial Services</p>', unsafe_allow_html=True)
         with col2:
-            st.markdown(f'<p class="big-font">{total_trans_category('Financial Services')}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="big-font">{total_trans_category("Financial Services")}</p>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
             st.markdown('<p class="small-font">Others</p>', unsafe_allow_html=True)
         with col2:
-            st.markdown(f'<p class="big-font">{total_trans_category('Others')}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p class="big-font">{total_trans_category("Others")}</p>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     with col1:
@@ -564,10 +564,10 @@ elif selected_option == 'User':
             crsr = myslq_engine.cursor()       
 
             # SQL query to be executed in the database
-            sql_command = """SELECT District, sum(User_count) as "User Count"
+            sql_command = """SELECT District, sum(Registered_Users) as "User Count"
                             FROM map_user
                             group by District
-                            order by sum(User_count) desc
+                            order by sum(Registered_Users) desc
                             limit 10;
                             """
             
@@ -577,7 +577,7 @@ elif selected_option == 'User':
 
             # adding result to the dataframe
             i = [i for i in range(1, len(queryResult)+1)]
-            df = pd.DataFrame(queryResult, columns=['District', 'User Count'
+            df = pd.DataFrame(queryResult, columns=['District', 'Registered Users'
                                                     ], index=i)
             myslq_engine.close()
 
@@ -597,10 +597,10 @@ elif selected_option == 'User':
             crsr = myslq_engine.cursor()       
 
             # SQL query to be executed in the database
-            sql_command = """SELECT Pincode, sum(User_count) as "User Count"
+            sql_command = """SELECT Pincode, sum(Registered_Users) as "User Count"
                             FROM top_user
                             group by Pincode
-                            order by sum(User_count) desc
+                            order by sum(Registered_Users) desc
                             limit 10;
                             """
             
@@ -610,7 +610,7 @@ elif selected_option == 'User':
 
             # adding result to the dataframe
             i = [i for i in range(1, len(queryResult)+1)]
-            df = pd.DataFrame(queryResult, columns=['Pincode', 'User Count'
+            df = pd.DataFrame(queryResult, columns=['Pincode', 'Registered Users'
                                                     ], index=i)
             myslq_engine.close()
 
